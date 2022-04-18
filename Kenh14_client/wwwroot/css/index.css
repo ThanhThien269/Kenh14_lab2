@@ -1,0 +1,18 @@
+#h1 {
+    color: aqua;
+}
+
+.text1 {
+    color: blue;
+    text-align: center;
+}
+
+.text2 {
+    color: red;
+    text-align: left;   
+}
+
+.text3 {
+    color: green;
+    text-align: right;
+}
