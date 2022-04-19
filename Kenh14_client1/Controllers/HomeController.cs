@@ -17,7 +17,12 @@ namespace Kenh14_client1.Controllers
         {
             return View();
         }
-
+        public IActionResult Car()
+        {
+            CarRepos repos = new CarRepos();
+            List<Car> cars = repos.getAllCar();
+            return View(cars);
+        }
         public IActionResult Privacy()
         {
             CarRepos rep= new CarRepos();

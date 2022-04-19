@@ -100,7 +100,7 @@ figure.snip0019 {
     position: relative;
     overflow: hidden;
     margin: 100px;
-    height:150px;
+    height:auto;
     min-height:140px;
     width: 100%;
     background-color: #fff;
