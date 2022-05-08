@@ -3,46 +3,99 @@
 
     Layout = "~/Views/Shared/kenhLayout.cshtml";
 }
-<div class="content">
-            
-        </div>
-        <div class="all">
-            <div class="head-nav">
-                <ul>
-                    <li><a href="">Giới Thiệu</a></li>
-                    <li><a href=""> Ô tô</a></li>
-                    <li><a href="">Xe máy</a></li>
-                </ul>
-            </div>
-             <div class="container">
-            
-                <div class="nav">
-                     <div class="brand">
-                        <h2>QT AUTOMOBILE</h2>
-                     </div>
-                </div>
-               
-             </div>
-      <div style="display: flex;">
+<
+<div class="list">
+    <h4 style="text-transform:uppercase;color:red">---------All Models</h4>
+    
+        <h1 style="margin-left:45%">Car Gallery</h1>
+   
+     <div  class="layout" >
 
         @foreach(Car c in Model)
         {
-            <figure class="snip0019">
-            <img src="~/Asset/@c.img" alt="sample11"/>
-            <p>@c.Name</p>
-            <figcaption>
-                <div><h2>Bạn thích <span> sự mạnh mẽ</span>?</h2></div>
-                <div><p>Hãy đến với mẫu xe hơi thể thao của chúng tôi.</p></div>
-                <a href="#"></a>
-            </figcaption>			
-        </figure>
+            <div class="item">
+            <img class="img" src="~/Asset/@c.img" alt="sample11"/>
+            <h2>@c.Name</h2>
+            	
+        </div>
         }
         
-       
-      </div>
-             
+  
+         </div>
+
+             </div>
+ <div class="new" style="background-color: rgba(40, 40, 40, 1);" >
+     <h4 style="text-transform:uppercase;color:red">---------New Models</h4>
+          <div class="slid-er" >
+            <div class="slides" id="slides">
+                <div class="slide">
+                <div class="slide-content">
+                 
+                    <img src="~/Asset/812 GTS.jpg" loading="lazy" />
+                    <div class="button-container">
+                      <span class="button">812 GTS</span>
+                    </div>
+                </div>
+              </div>
+               <div class="slide">
+                <div class="slide-content">
+                 
+                    <img src="~/Asset/F8 Spider.jpg" loading="lazy" />
+                    <div class="button-container">
+                      <span class="button">F8 Spider</span>
+                    </div>
+                </div>
+              </div>
+               <div class="slide">
+                <div class="slide-content">
+                 
+                    <img src="~/Asset/Ferrari M.jpg" loading="lazy" />
+                    <div class="button-container">
+                      <span class="button">Ferrari M</span>
+                    </div>
+                </div>
+              </div>
+               <div class="slide">
+                <div class="slide-content">
+                 
+                    <img src="~/Asset/SF90 Spider.jpg" loading="lazy" />
+                    <div class="button-container">
+                      <span class="button">SF90 Spider</span>
+                    </div>
+                </div>
+              </div>
+               <div class="slide">
+                <div class="slide-content">
+                 
+                    <img src="~/Asset/F8 Spider.jpg" loading="lazy" />
+                    <div class="button-container">
+                      <span class="button">F8 Spider</span>
+                    </div>
+                </div>
+              </div>
+               <div class="slide">
+                <div class="slide-content">
+                 
+                    <img src="~/Asset/F8 Spider.jpg" loading="lazy" />
+                    <div class="button-container">
+                      <span class="button">F8 Spider</span>
+                    </div>
+                </div>
+              </div>
+               <div class="slide">
+                <div class="slide-content">
+                 
+                    <img src="~/Asset/F8 Spider.jpg" loading="lazy" />
+                    <div class="button-container">
+                      <span class="button">F8 Spider</span>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    
          
       
         
-        <div class="footer"></div>
-    </div>

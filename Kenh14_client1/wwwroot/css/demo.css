@@ -4,7 +4,7 @@ body{
 }
 .all {
     height: 200vh;
-    width: 100vw;
+    width: 100%;
     background-color: #302f2f;
 }
 
@@ -12,12 +12,73 @@ body{
     top: 0;
     left: 0;
     position: relative;
-    background-image: url(http://2.bp.blogspot.com/-9GuF_iB-UMY/VoXX6wmuo7I/AAAAAAABDh8/USuGFHL85MU/s1600/2016%2BFerrari%2B488%2BGTB%2B%25281%2529.jpg);
+    background-image: url(https://znews-photo.zingcdn.me/w660/Uploaded/aobhuua/2022_04_19/2023_Ferrari_296_GTS_00001.jpg);
     height: 50%;
     width: 100%;
     background-attachment: fixed;
     background-size: cover;
 }
+
+
+
+.search {
+    margin: 20px;
+}
+
+    .search h3 {
+        font-weight: normal;
+    }
+    .search h1 {
+        font-weight: bolder;
+        font-size:xx-large;
+    }
+
+    .input {
+        display: inline-block;
+        position: relative;
+        filter: drop-shadow(0 1px #0091c2);
+    }
+
+        .input:after {
+            content: "";
+            background: white;
+            width: 4px;
+            height: 20px;
+            position: absolute;
+            top: 40px;
+            right: 2px;
+            transform: rotate(135deg);
+        }
+
+        .input input {
+            color: white;
+            font-size: 16px;
+            background: transparent;
+            cursor:pointer;
+            width: 25px;
+            height: 25px;
+            padding: 10px;
+            border: solid 3px white;
+            outline: none;
+            border-radius: 35px;
+            transition: width 0.5s;
+        }
+
+            .input input::placeholder {
+                color: #efefef;
+                opacity: 0;
+                transition: opacity 150ms ease-out;
+            }
+
+            .input input:focus::placeholder {
+                opacity: 1;
+            }
+
+            .input input:focus,
+            .input input:not(:placeholder-shown) {
+                width: 350px;
+            }
+
 
 .nav {
     margin-top: 6%;
@@ -100,7 +161,6 @@ figure.snip0019 {
     position: relative;
     overflow: hidden;
     margin: 100px;
-    height:auto;
     min-height:140px;
     width: 100%;
     background-color: #fff;
@@ -234,5 +294,241 @@ figure.snip0019 {
         -webkit-transition-delay: 0s;
         transition-delay: 0s;
     }
+ /*footer*/
+.contain {
+    width: 100%;
+    height: auto;
+    background-color: rgba(40, 40, 40, 1);
+    color: white;
+    padding-bottom: 10px;
+
+}
+
+#icon {
+    display: flex;
+    position: relative;
+
+}
+#icon i{
+    margin-left: 7%;
+}
+.instagram {
+    cursor: pointer;
+    background: pink;
+    background: -webkit-radial-gradient(33% 100% circle, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+    background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.facebook {
+    cursor: pointer;
+    color: #515ECF;
+}
+
+.youtube {
+    cursor: pointer;
+    color: #d22e2e;
+}
+
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-content {
+    width: 60%;
+    position: relative;
+    padding: 5% 0% 0% 7%;
+}
+
+    .about-content h2 {
+        font-size: 200%;
+        padding-top: 2%;
+    }
+
+.link-content h2 {
+    position: relative;
+    font-weight: 700;
+    margin-bottom: 13%;
+}
+
+    .link-content h2::before {
+        content: '';
+        position: absolute;
+        bottom: -5%;
+        left: 0;
+        width: 10%;
+        height: 8%;
+        background: #f00;
+    }
+
+.link-content {
+    padding-left: 5%;
+    padding-top: 4%;
+}
+
+    .link-content ul li {
+        text-decoration: none;
+        margin-bottom: 10%;
+        font-size: larger;
+    }
+
+.vl {
+    border-left: solid white;
+    height: 200px;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.link-content li:hover {
+    color: rgba(64, 64, 238, 0.856);
+}
+
+
+@media only screen and (max-width: 991px) {
+    .contain {
+        height: auto;
+    }
+
+    .link-content {
+        display: none;
+        margin-left: 5%;
+    }
+
+    .about-content {
+        font-size: medium;
+        margin-left: 15%;
+    }
+
+    .contain i {
+        margin-left: 10%;
+        position: relative;
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .about-content p {
+        display: none;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+        .about-content h2 {
+            font-size: 14px;
+            margin-left: 20%;
+        }
+
+    .vl {
+        display: none;
+    }
+
+   
+}
+/*San pham*/
+
+.list {
+    margin: 10px;
+    border: solid 2px;
+    padding: 10px;
+    background-color: white;
+    padding-bottom: 6%;
+    margin-top: 4%;
+}
+.layout {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    margin-top: 2%;
+    padding-bottom:4%;
+}
+.item {
+    width: 300px;
+    height: 350px;
+    border:solid 1px;
+    color:navy;
+    background-color: white;
+}
+.img {
+    width: 100%;
+    height: 70%;
+    background-color: blanchedalmond;
+}
+/* carousel*/
+
+.slide-content {
+    margin: 8px;
+    width: 250px;
+    height: 140px;
+    background-color: lightgray;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+.slid-er {
+    height: 156px; 
+
+    overflow: hidden;
+    width: 100%;
+}
+
+    .slid-er .slides {
+        display: flex;
+    }
+
+    .slid-er .slide {
+        width: 258px; 
+    }
+
+.button-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: opacity 0.25s;
+}
+
+    .button-container:hover {
+        opacity: 1;
+    }
+
+        .button-container:hover .button {
+            transform: translate(-50%, -50%);
+        }
+
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 12px));
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.25s;
+    padding: 0 8px;
+    border-radius: 12px;
+    color: white;
+    outline: 2px solid transparent;
+}
+
+    .button:after {
+        
+        margin: 0 3px 0 5px;
+        filter: invert(1);
+    }
+
+    .button:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+        outline: 2px solid gray;
+    }
   
- 
