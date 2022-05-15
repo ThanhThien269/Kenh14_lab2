@@ -452,12 +452,28 @@ figure.snip0019 {
     border:solid 1px;
     color:navy;
     background-color: white;
+    padding-bottom:25px
 }
 .img {
     width: 100%;
     height: 70%;
     background-color: blanchedalmond;
 }
+.btn-buy {
+    border: none;
+    color: white;
+    width: 90px;
+    padding: 10px 26px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #DA291C;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 2px 2px #888888;
+}
+    }
 /* carousel*/
 
 .slide-content {
