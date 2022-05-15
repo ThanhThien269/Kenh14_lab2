@@ -1,0 +1,55 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+@model List<Kenh14_client1.Models.Product>
+
+<div class="right_col" role="main" style="min-height: 3753px;">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Product</h2>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="x_content">
+
+                    <div class="table-responsive">
+                      <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                          <tr class="headings">
+                            <th class="column-title">Id</th>
+                            <th class="column-title">Name </th>
+                            <th class="column-title">Category </th>
+                            <th class="column-title">Price </th>
+                            <th class="column-title">Detail </th>
+                            <th class="column-title"></th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach(var item in Model)
+                           {
+                               
+                           
+                          <tr class="even pointer">
+                            <td class=" ">@item.Id</td>
+                            <td class=" ">@item.Name</td>
+                            <td class=" ">@item.Category</td>
+                            <td class=" ">@item.Price</td>
+                            <td class=" ">@item.Detail</td>
+                            <td><a href="~/Admin/DeleteProduct/@item.Id"><button type="button" class="btn btn-danger">Delete</button></a></td>
+                          </tr>
+                         } 
+                        </tbody>
+                      </table>
+                    </div>
+							
+						
+                  </div>
+                </div>
+              </div>
+    </div>
+</div>
