@@ -1,0 +1,31 @@
+﻿@model Product
+@{
+
+    Layout = "~/Views/Shared/kenhLayout.cshtml";
+}
+<div class="forDetail">
+    <div id="o-button">
+        <i class="fa fa-chevron-left" aria-hidden="true"  > 
+            @Html.ActionLink(" Back","index","Product",null, new { @style="color:white;text-decoration:none;" })
+        </i>
+    </div>
+    <div style="width:700px;height:500px;">
+        <img style="width:100%;margin:10% 0  0 40%" src="~/Asset/@Model.PhotoUrl"/>
+    </div>
+    <div id="o-info">
+        <h3 style="font-size:50px">@Model.Name</h3>
+        <div style="float:right;display:flex;margin-right:5%">
+            <p style="color:white;margin-right:10%">$@Model.Price</p>
+
+            <button class="btn-buy2" style="padding:0" >Mua</button>
+        </div>
+    </div>
+
+</div>
+<div class="OverViewDetail">
+    <br>
+    <h2>OverView</h2>
+    <p style="text-align:center">
+        @Model.Detail
+    </p>
+</div>
