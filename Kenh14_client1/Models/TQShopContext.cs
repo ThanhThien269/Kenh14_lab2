@@ -65,19 +65,15 @@ namespace Kenh14_client1.Models
 
                 entity.Property(e => e.Address)
                     .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.DateofBirth).HasColumnType("date");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                    .HasMaxLength(50);
 
-                entity.Property(e => e.Telephone)
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                entity.Property(e => e.Telephone).HasMaxLength(50);
             });
 
             modelBuilder.Entity<Employee>(entity =>
