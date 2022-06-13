@@ -29,7 +29,7 @@ namespace Kenh14_client1.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("server=ADMIN;user Id=sa;password=1;database=TQShop");
+                optionsBuilder.UseSqlServer("server=LAPTOP-0SK7S71J\\SQLEXPRESS;user Id=sa;password=1;database=TQShop");
             }
         }
 
@@ -63,41 +63,32 @@ namespace Kenh14_client1.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Address)
-                    .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                entity.Property(e => e.Address).IsRequired();
 
                 entity.Property(e => e.DateofBirth).HasColumnType("date");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.Telephone)
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                    .IsRequired()
+                    .HasMaxLength(50);
             });
 
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.ToTable("Employee");
 
-                entity.Property(e => e.Address)
-                    .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                entity.Property(e => e.Address).IsRequired();
 
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.Tel)
                     .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                    .HasMaxLength(50);
             });
 
             modelBuilder.Entity<Product>(entity =>
