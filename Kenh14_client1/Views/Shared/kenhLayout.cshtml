@@ -9,51 +9,25 @@
     <title>Document</title>
 </head>
 <body>
-<div class="content">
-            
 
-        </div>
-        <div class="all">
-            <div class="head-nav">
-                <ul>
-                    <li><a href="/home">Giới Thiệu</a></li>
-                    <li><a href="/home/car"> Ô tô</a></li>
-                    <li><a href="/home/bike">Xe máy</a></li>
-                </ul>
-            </div>
-            @RenderBody()
-             
-         
-      
-        
- <div class="footer">
-            
-<div class="contain">
-    <div class="info">
-        <div class="link-content">
-            <h2>Đường Dẫn</h2>
-            <ul style="cursor: pointer;list-style-type: none;">
-                <li>Trang chủ</li>
-                <li>Về chúng tôi</li>
-                <li>Thông tin liên lạc</li>
-                <li>Đánh giá</li>
+    <div class="all">
+        <div class="head-nav">
+            <ul>
+                <li>@Html.ActionLink("Home","index","Home")</li>
+                <li>@Html.ActionLink("Gallery","index","Product")</li>
+
+            </ul>
+            <ul style="float:right">
+                <li>@Html.ActionLink("Contact","Contact","Home")</li>
             </ul>
         </div>
-        <div class="vl"> </div>
-        <div class="about-content">
-            <div id="icon">
-                 <i class="fa fa-facebook-square  fa-2x facebook " aria-hidden="true" ></i>
-                        <i class="fa fa-instagram fa-2x instagram" aria-hidden="true"  ></i>
-                        <i class="fa fa-youtube-play fa-2x youtube" aria-hidden="false"></i>
-            </div>
+        @RenderBody()
 
-        <h2 style="margin-top: 10px;" >Đăng Kí Để Theo Dõi Những Mẫu Xe Mới Nhất </h2>
-   
-        </div>
+
+
+
+       
     </div>
-        </div>
-    </div>
-    </div>
-        <script src="~/js/Dom.js"></script> 
+    <script src="~/js/Dom.js"></script>
 </body>
 </html>

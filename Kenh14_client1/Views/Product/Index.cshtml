@@ -1,23 +1,24 @@
-﻿@model List<Car>
+﻿@model List<Category>
 @{
 
     Layout = "~/Views/Shared/kenhLayout.cshtml";
 }
-<
+
+ <h1 style="margin-left:35%;font-size:60px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">VEHICLE GALLERY</h1>
+      @foreach(var c in Model){
 <div class="list">
-    <h4 style="text-transform:uppercase;color:red">---------All Models</h4>
+    <h4 style="text-transform:uppercase;color:red;margin-left:2%;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">    ____________ @c.Id . @c.Name</h4>
     
-        <h1 style="margin-left:45%">Car Gallery</h1>
-   
      <div  class="layout" >
 
-        @foreach(Car c in Model)
+        @foreach(var p in c.Products)
         {
             <div class="item">
-            <img class="img" src="~/Asset/@c.img" alt="sample11"/>
-            <h2>@c.Name</h2>
+            <img class="img" src="~/Asset/@p.PhotoUrl" alt="sample11"/>
+            <h2 style="margin-left:10px;color:navy">@p.Name</h2>
+            <h3 style="margin-left:10px;">$ @p.Price  </h3>
             <div style="display:flex; justify-content:space-around"> 
-         <button class="btn-buy" style="background-color:#FFF;color:black;border:0.2px solid black">Detail</button>
+         <button class="btn-buy" style="background-color:#FFF;color:black;border:0.2px solid black">@Html.ActionLink("Detail","Car","Product",new{id=@p.Id})</button>
 
          <button class="btn-buy" >Mua</button>
          </div>
@@ -28,7 +29,8 @@
          </div>
 
              </div>
- <div class="new" style="background-color: rgba(40, 40, 40, 1);" >
+             }
+ <div class="new" style="background-color: rgba(40, 40, 40, 1);padding:5% 0 2%" >
      <h4 style="text-transform:uppercase;color:red">---------New Models</h4>
           <div class="slid-er" >
             <div class="slides" id="slides">
@@ -68,36 +70,30 @@
                     </div>
                 </div>
               </div>
-               <div class="slide">
+                    <div class="slide">
                 <div class="slide-content">
                  
-                    <img src="~/Asset/F8 Spider.jpg" loading="lazy" />
+                    <img src="~/Asset/LaFerrari.jpg" loading="lazy" />
                     <div class="button-container">
-                      <span class="button">F8 Spider</span>
+                      <span class="button">LaFerrari</span>
                     </div>
                 </div>
               </div>
-               <div class="slide">
+                    <div class="slide">
                 <div class="slide-content">
                  
-                    <img src="~/Asset/F8 Spider.jpg" loading="lazy" />
+                    <img src="~/Asset/488 Pista.jpg" loading="lazy" />
                     <div class="button-container">
-                      <span class="button">F8 Spider</span>
+                      <span class="button">488 Pista</span>
                     </div>
                 </div>
               </div>
-               <div class="slide">
-                <div class="slide-content">
-                 
-                    <img src="~/Asset/F8 Spider.jpg" loading="lazy" />
-                    <div class="button-container">
-                      <span class="button">F8 Spider</span>
-                    </div>
-                </div>
-              </div>
-
             </div>
           </div>
+        </div>
+         <div class="footer">
+
+           @Html.Partial("_FooterPartialView")
         </div>
     
          
