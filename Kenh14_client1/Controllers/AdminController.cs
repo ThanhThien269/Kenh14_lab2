@@ -5,9 +5,10 @@ namespace Kenh14_client1.Controllers
 {
     public class AdminController : Controller
     {
-        TQshopContext ctx = new TQshopContext();
+        TQShopContext ctx = new TQShopContext();
         public IActionResult Index()
         {
+
             return View();
         }
         public IActionResult AllProduct()

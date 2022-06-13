@@ -6,19 +6,18 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Kenh14_client1.Models
 {
-    public partial class TQshopContext : DbContext
+    public partial class TQShopContext : DbContext
     {
-        public TQshopContext()
+        public TQShopContext()
         {
         }
 
-        public TQshopContext(DbContextOptions<TQshopContext> options)
+        public TQShopContext(DbContextOptions<TQShopContext> options)
             : base(options)
         {
         }
 
         public virtual DbSet<Admin> Admins { get; set; }
-        public virtual DbSet<CarCompany> CarCompanies { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
@@ -30,7 +29,7 @@ namespace Kenh14_client1.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("server=laptop-0sk7s71j\\sqlexpress;user Id=sa;password=1;database=TQshop");
+                optionsBuilder.UseSqlServer("server=LAPTOP-0SK7S71J\\SQLEXPRESS;user Id=sa;password=1;database=TQShop");
             }
         }
 
@@ -48,27 +47,14 @@ namespace Kenh14_client1.Models
                     .IsFixedLength(true);
             });
 
-            modelBuilder.Entity<CarCompany>(entity =>
+            modelBuilder.Entity<Category>(entity =>
             {
-                entity.ToTable("Car-Company");
+                entity.ToTable("Category");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);
-            });
-
-            modelBuilder.Entity<Category>(entity =>
-            {
-                entity.ToTable("Category");
-
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.Property(e => e.Category1)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("Category");
             });
 
             modelBuilder.Entity<Customer>(entity =>
@@ -77,41 +63,32 @@ namespace Kenh14_client1.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Address)
-                    .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                entity.Property(e => e.Address).IsRequired();
 
                 entity.Property(e => e.DateofBirth).HasColumnType("date");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.Telephone)
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                    .IsRequired()
+                    .HasMaxLength(50);
             });
 
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.ToTable("Employee");
 
-                entity.Property(e => e.Address)
-                    .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                entity.Property(e => e.Address).IsRequired();
 
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.Tel)
                     .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                    .HasMaxLength(50);
             });
 
             modelBuilder.Entity<Product>(entity =>
@@ -120,24 +97,28 @@ namespace Kenh14_client1.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Category)
-                    .IsRequired()
-                    .HasMaxLength(50);
-
                 entity.Property(e => e.Detail)
                     .IsRequired()
-                    .HasMaxLength(50);
+                    .HasMaxLength(200);
 
                 entity.Property(e => e.Name)
                     .IsRequired()
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.PhotoUrl)
                     .IsRequired()
                     .HasMaxLength(50)
+                    .IsUnicode(false)
                     .HasColumnName("PhotoURL");
 
                 entity.Property(e => e.Price).HasColumnType("money");
+
+                entity.HasOne(d => d.Category)
+                    .WithMany(p => p.Products)
+                    .HasForeignKey(d => d.CategoryId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Product_Category");
             });
 
             modelBuilder.Entity<SellContract>(entity =>

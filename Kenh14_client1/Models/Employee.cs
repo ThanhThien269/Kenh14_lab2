@@ -11,5 +11,6 @@ namespace Kenh14_client1.Models
         public string Name { get; set; }
         public string Address { get; set; }
         public string Tel { get; set; }
+        public int IdProduct { get; set; }
     }
 }

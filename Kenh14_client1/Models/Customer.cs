@@ -12,5 +12,6 @@ namespace Kenh14_client1.Models
         public DateTime DateofBirth { get; set; }
         public string Telephone { get; set; }
         public string Address { get; set; }
+        public int IdProduct { get; set; }
     }
 }
