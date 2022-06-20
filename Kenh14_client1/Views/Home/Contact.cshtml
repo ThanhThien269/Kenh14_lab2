@@ -51,6 +51,11 @@
                 <label for="birthday">Birthday:</label>
                  @Html.TextBoxFor(m => m.DateofBirth,new{type="date"})
               </div>
+              <div class="form-group">
+                <label for="care-input">What're you caring about? </label>
+                @Html.TextBoxFor(m => m.Care,new{type="text"})
+
+              </div>
               <br>
               <button type="submit" value="Send" id="submit">Send </button>
                

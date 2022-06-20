@@ -102,9 +102,17 @@ namespace Kenh14_client1.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Detail)
-                    .IsRequired()
-                    .HasMaxLength(200);
+                entity.Property(e => e.Consumption)
+                    .HasMaxLength(50)
+                    .HasColumnName("consumption");
+
+                entity.Property(e => e.Drc)
+                    .HasMaxLength(200)
+                    .HasColumnName("DRC");
+
+                entity.Property(e => e.Engine).HasMaxLength(50);
+
+                entity.Property(e => e.Momen).HasMaxLength(50);
 
                 entity.Property(e => e.Name)
                     .IsRequired()

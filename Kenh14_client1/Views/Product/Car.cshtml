@@ -25,19 +25,40 @@
 <div class="OverViewDetail">
     <br>
     <h2>OverView</h2>
-    <table class="table table-striped table-dark" style="width:50%;margin-left:20%">
+    <table class="table table-bordered table-dark" style="width:50%;margin-left:25%">
   <thead>
     <tr style="text-align:center">
-      <th scope="col"></th>
-      <th scope="col">Detail</th>
-
+      <td scope="col"></td>
+      <td scope="col">Detail</td>
+      
+      
     </tr>
   </thead>
   <tbody>
+      <tr>
+      <th scope="col">Kích thước DxRxC</th>
+      <th style="width:400px">@Model.Drc</th>
+    </tr>
     <tr>
-      <th scope="row">Động cơ</th>
-      <td style="width:400px">@Model.Detail</td>
+      <th scope="col">Động Cơ</th>
+      <th style="width:400px">@Model.Engine</th>
+    </tr>
+    <tr>
+      <th scope="col">Mô-men xoắn cực đại</th>
+      <th style="width:400px">@Model.Momen</th>
+    </tr>
+    <tr>
+      <th scope="col">Tiêu thụ nhiên liệu</th>
+      <th style="width:400px">@Model.Consumption</th>
+    </tr>
+    <tr>
+      <th scope="col">Chỗ ngồi</th>
+      <th style="width:400px">@Model.Seat</th>
     </tr>
     </tbody>
     </table>
 </div>
+ <div class="footer">
+
+           @Html.Partial("_FooterPartialView")
+        </div>
