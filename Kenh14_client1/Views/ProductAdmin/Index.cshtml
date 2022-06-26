@@ -2,7 +2,7 @@
 @{
     Layout = "~/Views/Shared/_adminLayout.cshtml";
 }
-
+@model List<Kenh14_client1.Models.Category>
 <div class="right_col" role="main" style="min-height: 3753px;">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -24,6 +24,7 @@
                             <th class="column-title">Price </th>
                             <th class="column-title">Detail </th>
                             <th class="column-title"></th>
+                            <th class="column-title"></th>
                           </tr>
                         </thead>
 
@@ -35,9 +36,10 @@
                           <tr class="even pointer">
                             <td class=" ">@item.Id</td>
                             <td class=" ">@item.Name</td>
-                            <td class=" ">@item.Category</td>
+                            <td class=" ">@item.CategoryId</td>
                             <td class=" ">@item.Price</td>
                             <td class=" ">@item.Detail</td>
+                            <td><a href="~/Admin/DeleteProduct/@item.Id"><button type="button" class="btn btn-danger">Update</button></a></td>
                             <td><a href="~/Admin/DeleteProduct/@item.Id"><button type="button" class="btn btn-danger">Delete</button></a></td>
                           </tr>
                          } 
