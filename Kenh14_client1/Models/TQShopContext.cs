@@ -73,16 +73,16 @@ namespace Kenh14_client1.Models
                     .IsRequired()
                     .HasMaxLength(50);
 
-                entity.Property(e => e.Telephone)
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                entity.Property(e => e.Telephone).HasMaxLength(50);
             });
 
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.ToTable("Employee");
 
-                entity.Property(e => e.Address).IsRequired();
+                entity.Property(e => e.Address)
+                    .IsRequired()
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.Name)
                     .IsRequired()
@@ -99,9 +99,17 @@ namespace Kenh14_client1.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Detail)
-                    .IsRequired()
-                    .HasMaxLength(200);
+                entity.Property(e => e.Consumption)
+                    .HasMaxLength(50)
+                    .HasColumnName("consumption");
+
+                entity.Property(e => e.Drc)
+                    .HasMaxLength(200)
+                    .HasColumnName("DRC");
+
+                entity.Property(e => e.Engine).HasMaxLength(50);
+
+                entity.Property(e => e.Momen).HasMaxLength(50);
 
                 entity.Property(e => e.Name)
                     .IsRequired()
