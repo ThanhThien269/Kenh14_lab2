@@ -14,8 +14,8 @@
     </div>
     <div id="o-info">
         <h3 style="font-size:50px">@Model.Name</h3>
-        <div style="float:right;display:flex;margin-right:5%">
-            <p style="color:white;margin-right:10%">$@Model.Price</p>
+        <div style="float:right;display:flex;margin-right:5%;padding-top:8%">
+            <p style="color:white;margin-right:10%;margin-top:2%;font-size:40px">$@Model.Price</p>
 
             <button class="btn-buy2" style="padding:0" >Mua</button>
         </div>
@@ -25,7 +25,19 @@
 <div class="OverViewDetail">
     <br>
     <h2>OverView</h2>
-    <p style="text-align:center">
-        @Model.Detail
-    </p>
+    <table class="table table-striped table-dark" style="width:50%;margin-left:20%">
+  <thead>
+    <tr style="text-align:center">
+      <th scope="col"></th>
+      <th scope="col">Detail</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Động cơ</th>
+      <td style="width:400px">@Model.Detail</td>
+    </tr>
+    </tbody>
+    </table>
 </div>

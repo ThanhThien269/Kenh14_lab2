@@ -63,7 +63,9 @@ namespace Kenh14_client1.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Address).IsRequired();
+                entity.Property(e => e.Address)
+                    .IsRequired()
+                    .HasMaxLength(50);
 
                 entity.Property(e => e.DateofBirth).HasColumnType("date");
 
@@ -72,8 +74,8 @@ namespace Kenh14_client1.Models
                     .HasMaxLength(50);
 
                 entity.Property(e => e.Telephone)
-                    .IsRequired()
-                    .HasMaxLength(50);
+                    .HasMaxLength(10)
+                    .IsFixedLength(true);
             });
 
             modelBuilder.Entity<Employee>(entity =>

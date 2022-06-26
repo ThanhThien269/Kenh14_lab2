@@ -9,7 +9,7 @@ body {
     background-color: white;
 }
 
-.container {
+.containers {
     top: 0;
     left: 0;
     position: relative;
@@ -296,13 +296,13 @@ figure.snip0019 {
         -webkit-transition-delay: 0s;
         transition-delay: 0s;
     }
-/*footer*/
-.contain {
+ /*footer*/
+.contains {
     width: 100%;
-    height: 300px;
-    background-color: black;
+    height: 350px;
+    background-color: rgba(0,0,0,10);
     color: white;
-    padding-bottom: 10px;
+    margin-top: 50px;
     padding-top:80px
 }
 

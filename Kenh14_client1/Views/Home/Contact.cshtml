@@ -2,4 +2,68 @@
 
     Layout = "~/Views/Shared/kenhLayout.cshtml";
 }
+@model Customer;
+<div class="contact-tittle" >
+    <h1 >Contact US</h1>
+</div>
+<div class="body-contact">
 
+<div class="contact-form">
+          <div class="first-container">
+            <div class="info-container">
+              <div><img class="icon"/>
+                <h3>Address</h3>
+                <p>8 Nguyễn Văn Tráng, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh 700000</p>
+              </div>
+              <div> <img class="icon"/>
+                <h3>Lets Talk</h3>
+                <p>0335965933</p>
+              </div>
+              <div><img class="icon"/>
+                <h3>General Support</h3>
+                <p>thien.mlt8601@sinhvien.hoasen.edu.vn</p>
+              </div>
+            </div>
+          </div>
+          <div class="second-container">
+            <h2>Welcome to contact us</h2>
+            @using (Html.BeginForm("Contact","Home",FormMethod.Post))
+          {
+              <div class="form-group">
+                <label for="name-input">Tell us your name*</label>
+                 @Html.TextBoxFor(m => m.Name,new{placeholder="Full Name",required="required",type="text"})
+                 @Html.ValidationMessageFor(m=>m.Name,"",new{@class="text-danger"})
+              </div>
+            
+              <div class="form-group">
+                <label for="email-input">Enter your email*</label>
+               @Html.TextBoxFor(m => m.Address,new{placeholder="example@gmai.com",required="required",type="email"})
+               @Html.ValidationMessageFor(m=>m.Address,"",new{@class="text-danger"})
+             
+           </div>
+              <div class="form-group">
+                <label for="phone-input">Enter phone number*</label>
+                @Html.TextBoxFor(m => m.Telephone,new{placeholder="+84",type="text"})
+                @Html.ValidationMessageFor(m=>m.Telephone,"",new{@class="text-danger"})
+
+              </div>
+              <div class="form-group">
+                <label for="birthday">Birthday:</label>
+                 @Html.TextBoxFor(m => m.DateofBirth,new{type="date"})
+              </div>
+              <br>
+              <button type="submit" value="Send" id="submit">Send </button>
+               
+
+          }
+          </div>
+        </div>
+        </div>
+
+<div class="container-xxl py-6 px-0 wow fadeInUp" data-wow-delay="0.1s">
+        <iframe class="w-100 mb-n2" style="height: 450px;width: 100%;"
+            src="https://www.google.com/maps/d/u/0/embed?mid=1HPadZaXtgF31I8F7Rj04joHIzC0&ll=11.837395662435707%2C105.8389848984376&z=6"
+            frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+     
+    
