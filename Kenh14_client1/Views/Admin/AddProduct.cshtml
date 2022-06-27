@@ -1,0 +1,35 @@
+﻿
+@model Kenh14_client1.Models.Product
+
+@using (Html.BeginForm("AddProduct","Admin",FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Tên xe</label>
+
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Loại xe</label>
+        @Html.TextBoxFor(m => m.Category, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Giá cả</label>
+        @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Hình ảnh</label>
+        @Html.TextBoxFor(m => m.PhotoUrl, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Chi tiết</label>
+        @Html.TextBoxFor(m => m.Drc, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+
+        <button class="btn btn-primary">Submit</button>
+    </div>
+}

@@ -1,0 +1,60 @@
+﻿
+@model Kenh14_client1.Models.Product
+
+@using (Html.BeginForm("Product","ProductAdmin",FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Tên xe</label>
+
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="categoryId">
+                   Choose Category <span class="required">*</span>
+             </label>
+             <div class="col-md-6 col-sm-6 col-xs-12">
+                 @Html.DropDownListFor(m => m.CategoryId,
+                 new SelectList(ViewBag.categories, "Id", "Name"))
+             </div>
+    </div>
+
+    <div class="form-group">
+        <label>Giá cả</label>
+        @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Hình ảnh</label>
+        @Html.TextBoxFor(m => m.PhotoUrl, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Chiều dài, rộng, cao của xe</label>
+        @Html.TextBoxFor(m => m.Drc, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Động cơ</label>
+        @Html.TextBoxFor(m => m.Engine, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Momen xoắn</label>
+        @Html.TextBoxFor(m => m.Momen, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Nhiên liệu tiêu thụ</label>
+        @Html.TextBoxFor(m => m.Consumption, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Số ghế</label>
+        @Html.TextBoxFor(m => m.Seat, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary" >Submit</button>
+    </div>
+}
