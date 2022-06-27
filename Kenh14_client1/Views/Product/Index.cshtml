@@ -20,7 +20,7 @@
             <div style="display:flex; justify-content:space-around"> 
          <button class="btn-buy" style="background-color:#FFF;color:black;border:0.2px solid black">@Html.ActionLink("Detail","Car","Product",new{id=@p.Id})</button>
 
-         <button class="btn-buy" >Mua</button>
+         <button class="btn-buy" >@Html.ActionLink("Enquire","Contact","Home",null,new{id=@p.Id,@style="color:white;"})</button>
          </div>
         </div>
         }
