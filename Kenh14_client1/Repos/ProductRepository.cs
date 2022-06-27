@@ -25,9 +25,18 @@ namespace Kenh14_client1.Repos
             throw new NotImplementedException();
         }
 
-        public Product AddProduct(Product product)
+        public bool AddProduct(Product product)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _shopContext.Products.Add(product);
+                _shopContext.SaveChanges();
+                return true;
+            }catch
+            {
+                return false;
+            }
+            
         }
     }
 }

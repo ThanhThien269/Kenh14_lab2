@@ -7,6 +7,6 @@ namespace Kenh14_client1.Repos
         List<Product> GetAllProducts();
         List<Product> GetProductsByCategoryId(int id);
         Product GetProductById(int id);
-        Product AddProduct(Product product);
+        bool AddProduct(Product product);
     }
 }

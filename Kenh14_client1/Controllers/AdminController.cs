@@ -40,9 +40,12 @@ namespace Kenh14_client1.Controllers
                 ctx.Products.Remove(pd);
                 ctx.SaveChanges();
             }
-            
-            
             return RedirectToAction("AllProduct");
+        }
+        public IActionResult CustomerContact()
+        {
+            List<Customer> lst = ctx.Customers.ToList();
+            return View(lst);
         }
 
 

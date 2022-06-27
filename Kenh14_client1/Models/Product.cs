@@ -16,7 +16,7 @@ namespace Kenh14_client1.Models
         public string Engine { get; set; }
         public string Momen { get; set; }
         public string Consumption { get; set; }
-        public int? Seat { get; set; }
+        public int Seat { get; set; }
 
         public virtual Category Category { get; set; }
     }

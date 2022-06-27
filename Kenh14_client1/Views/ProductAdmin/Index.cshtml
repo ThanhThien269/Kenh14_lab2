@@ -22,8 +22,11 @@
                             <th class="column-title">Name </th>
                             <th class="column-title">Category </th>
                             <th class="column-title">Price </th>
-                            <th class="column-title">Detail </th>
-                            <th class="column-title"></th>
+                            <th class="column-title">Chiều dài xe </th>
+                            <th class="column-title">Động cơ </th>
+                            <th class="column-title">Momen xoắn </th>
+                            <th class="column-title">Nhiên liệu tiêu thụ </th>
+                            <th class="column-title">Chỗ ngồi </th>
                             <th class="column-title"></th>
                           </tr>
                         </thead>
@@ -38,8 +41,11 @@
                             <td class=" ">@item.Name</td>
                             <td class=" ">@item.CategoryId</td>
                             <td class=" ">@item.Price</td>
-                            <td class=" ">@item.Detail</td>
-                            <td><a href="~/Admin/DeleteProduct/@item.Id"><button type="button" class="btn btn-danger">Update</button></a></td>
+                            <td class=" ">@item.Drc</td>
+                            <td class=" ">@item.Engine</td>
+                            <td class=" ">@item.Momen</td>
+                            <td class=" ">@item.Consumption</td>
+                            <td class=" ">@item.Seat</td>
                             <td><a href="~/Admin/DeleteProduct/@item.Id"><button type="button" class="btn btn-danger">Delete</button></a></td>
                           </tr>
                          } 

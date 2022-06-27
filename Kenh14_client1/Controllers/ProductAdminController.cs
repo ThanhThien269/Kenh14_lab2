@@ -26,5 +26,12 @@ namespace Kenh14_client1.Controllers
             ViewBag.categories = _categoryRepository.getAllCategories();
             return View(item);
         }
+        [HttpPost]
+        public IActionResult Product(Product i)
+        {
+            _productRepository.AddProduct(i);
+            return RedirectToAction("Index");
+
+        }
     }
 }

@@ -30,11 +30,31 @@
     </div>
 
     <div class="form-group">
-        <label>Chi tiết</label>
-        @Html.TextBoxFor(m => m.Detail, new { @class = "form-control" })
+        <label>Chiều dài, rộng, cao của xe</label>
+        @Html.TextBoxFor(m => m.Drc, new { @class = "form-control" })
     </div>
-    <div class="form-group">
 
-        <button class="btn btn-primary">Submit</button>
+    <div class="form-group">
+        <label>Động cơ</label>
+        @Html.TextBoxFor(m => m.Engine, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Momen xoắn</label>
+        @Html.TextBoxFor(m => m.Momen, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Nhiên liệu tiêu thụ</label>
+        @Html.TextBoxFor(m => m.Consumption, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Số ghế</label>
+        @Html.TextBoxFor(m => m.Seat, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary" >Submit</button>
     </div>
 }
